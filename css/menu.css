@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Poppins:wght@300;400;600&display=swap');
 
-/* RESETEO */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,18 +9,8 @@
 }
 
 body {
-  background: #252525; ;;
-  padding-top: 70px; 
-}
-
-/* HEADER */
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-  background-color: #3b141c;
-  top: 0;
-  left: 0;
+  background: #252525;
+  padding-top: 70px;
 }
 
 ul {
@@ -29,17 +19,29 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-header .nabvar {
+/* HEADER  */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3b141c;
+  z-index: 100;
+}
+
+.nabvar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: relative;
 }
 
-
-.nabvar .nav-logo .nav-text {
+/* Logo */
+.nav-logo .nav-text {
   color: white;
   font-size: 22px;
   font-weight: bold;
@@ -48,15 +50,15 @@ header .nabvar {
   gap: 8px;
 }
 
-.nabvar .nav-menu {
+/* MENU */
+.nav-menu {
   display: flex;
-  gap: 30px; 
+  gap: 30px;
   justify-content: center;
-  flex: 1; 
+  flex: 1;
 }
 
-
-.nabvar .nav-menu .nav-link {
+.nav-menu .nav-link {
   padding: 10px 18px;
   color: white;
   font-size: large;
@@ -64,58 +66,63 @@ header .nabvar {
   transition: 0.3s ease;
 }
 
-.nabvar .nav-menu .nav-link:hover {
+.nav-menu .nav-link:hover {
   color: #3b141c;
   background-color: #e2750f;
 }
 
-.fa-cart-shopping {
-  font-size: 22px;
-  color: white;
-
+/* ICONOS  */
+.iconos-responsive {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fafcfc;
+}
+
+.carrito {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 .carrito #contador {
   position: absolute;
   top: -8px;
   right: -8px;
-  background:#e2750f;
+  background: #e2750f;
   color: white;
   font-size: 12px;
   font-weight: bold;
   padding: 4px 7px;
   border-radius: 50%;
 }
-.carrito {
-  position: fixed;
-  top: 10px;     
-  right: 30px; 
-  color: #fff;
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 22px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  z-index: 10;
-}
 
-
-/* TITULO PRINCIPAL */
+/* MAIN */
 h1 {
   text-align: center;
   color: rgb(249, 246, 246);
-  margin: 10px 0 25px; 
+  margin: 10px 0 25px;
   font-size: 32px;
   font-weight: bold;
 }
+
 .linea {
-  width: 60px; 
+  width: 60px;
   height: 4px;
   background-color: orange;
-  margin: 1px auto 15px; 
-  border-radius: 2px; 
+  margin: 1px auto 15px;
+  border-radius: 2px;
 }
 
-/* CONTENEDOR DE PRODUCTOS */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -124,12 +131,13 @@ h1 {
   justify-content: center;
 }
 
+
 .ecard {
   background: linear-gradient(to right, #3b141c, #5c1f2a, #7a2d3b);
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  flex: 0 1 calc(33.333% - 40px); 
-  max-width: 320px;               
+  flex: 0 1 calc(33.333% - 40px);
+  max-width: 320px;
   height: 420px;
   display: flex;
   flex-direction: column;
@@ -140,7 +148,6 @@ h1 {
   color: #fff;
 }
 
-
 .ecard img {
   width: 100%;
   border-radius: 10px;
@@ -149,7 +156,7 @@ h1 {
 }
 
 .ecard .contenido {
-  flex-grow: 1;  
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,7 +175,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* BOTONES */
 .ecard button {
   background: #e2750f;
   border: 1px solid #333;
@@ -178,29 +184,92 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-/* Contenedor de los botones */
-.btn-group {
-  display: flex;
-  gap: 10px;             
-  justify-content: center;
-  margin-top: 10px;
-}
-
-/* Para que compartan mismo estilo base */
-.btn-group button {
-  flex: 1;              
-}
 
 .ecard button:hover {
   background: #333;
   color: #fff;
 }
 
-/* EFECTO HOVER EN TARJETA */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-group button {
+  flex: 1;
+}
+
 .ecard:hover {
   transform: scale(1.05);
 }
+
+/* RESPONSIVE*/
+#menu-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  /* Carrito junto a hamburguesa */
+  .carrito {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Contenedor hamburguesa + carrito */
+  .iconos-responsive {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Navbar más compacto */
+  .nabvar {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  /* Menú oculto por defecto */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    background-color: #3b141c;
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 250;
+  }
+
+  /* Menú visible cuando el checkbox está activo */
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu .nav-link {
+    text-align: center;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .nav-menu .nav-link:hover {
+    background-color: #e2750f;
+    color: #3b141c;
+  }
+
+  /* Tarjetas en 2 columnas */
   .ecard {
     flex: 0 1 calc(50% - 20px);
   }

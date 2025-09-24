@@ -1,120 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/menu.css">
-    <title> SITO DE CAFE </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/menu.css" />
+  <title>SITIO DE CAFÉ</title>
+  <script src="https://kit.fontawesome.com/bdc4e23805.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
+  <header>
     <nav class="nabvar">
-        <a href="./index.html" class="nav-logo">
-            <h2 class="nav-text">☕️ Coffee</h2>
-        </a>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="./index.html" class="nav-link">Home</a>
-            </li>
-             <li class="nav-item">
-                <a href="./menu.html" class="nav-link">Menu</a>
-            </li>
-             <li class="nav-item">
-                <a href="#" class="nav-link">Galeria</a>
-            </li>
-             <li class="nav-item">
-                <a href="#" class="nav-link">Contactenos</a>
-            </li>
+      <a href="./index.html" class="nav-logo">
+        <h2 class="nav-text">☕️ Coffee</h2>
+      </a>
 
-        </ul>
-        <div class="carrito">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="contador">0</span>
-            </div>
+      <input type="checkbox" id="menu-toggle" />
 
-    </nav>
-</header>
- 
-<main>
-        <h1>MENU</h1>
-        <div class="linea"></div>
-        <div class="container">
-            <div class="ecard">
-                <img src="./img/hot-beverages.png" alt="">
-                <div class="contenido">
-                    <h2>Bebidas Calientes </h2>
-                    <p>Amplia variedad de cafés calientes al vapor para hacerte sentir fresco y ligero</p>
-                </div>
-                <div class=""btn-group"">
-                 <button class="btncomprar">Comprar</button>
-                 <button class="btncomprar">Mas detaller</button>
-                 </div>
-            </div>
+      <!-- Íconos responsive: hamburguesa + carrito -->
+      <div class="iconos-responsive">
+        <label for="menu-toggle" class="menu-icon">
+          <i class="fa-solid fa-bars"></i>
+        </label>
 
-            <div class="ecard">
-                <img src="./img/cold-beverages.png" alt="">
-                <div class="contenido">
-                    <h2>Bebidas frías </h2>
-                    <p>Cremoso y espumoso café frío para hacerte sentir fresco. </p>
-                </div>
-                <div class=""btn-group"">
-                <button class="btncomprar">Comprar</button>
-                <button class="btncomprar">Mas detalles </button>
-                </div>
-            </div>
-
-            <div class="ecard">
-                <img src="./img/refreshment.png" alt="">
-                <div class="contenido">
-                    <h2>Refrescos</h2>
-                    <p>Bebida refrescante con frutas y hielo para hacerte sentir renovado.</p>
-                </div>
-               <div class=""btn-group"">
-                <button class="btncomprar">Comprar</button>
-                <button class="detalles">Mas detalles </button>
-                </div>
-            </div>
-            <div class="ecard">
-                <img src="./img/special-combo.png" alt="">
-                <div class="contenido">
-                    <h2>Espaciales combos</h2>
-                    <p>Combos especiales con la mejor combinación de sabor, rapidez y precio.</p>
-                </div>
-               <div class=""btn-group"">
-                <button class="btncomprar">Comprar</button>
-                <button class="detalles">Mas detalles </button>
-                </div>
-            </div>
-            <div class="ecard">
-                <img src="./img/burger-frenchfries.png" alt="">
-                <div class="contenido">
-                    <h2>Comidas Rapidas </h2>
-                    <p>Deliciosas hamburguesas, pizzas y snacks listos en minutos para disfrutar al instante</p>
-                </div>
-               <div class=""btn-group"">
-                <button class="btncomprar">Comprar</button>
-                <button class="detalles ">Mas detalles </button>
-                </div>
-            </div>
-            <div class="ecard">
-                <img src="./img/desserts.png" alt="">
-                <div class="contenido">
-                    <h2>POSTRES </h2>
-                    <p>Postres dulces y deliciosos para endulzar cada momento..</p>
-                </div>
-               <div class=""btn-group"">
-                <button class="btncomprar">Comprar</button>
-                <button class="dellades">Mas detalles </button>
-                </div>
-            </div>
+        <div class="carrito mostrar">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="contador">0</span>
         </div>
-    </main>
+      </div>
 
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="./menu.html" class="nav-link">Menu</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Galería</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contáctenos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>MENU</h1>
+    <div class="linea"></div>
+    <div class="container">
+      <!-- Tarjetas de productos -->
+      <div class="ecard">
+        <img src="./img/hot-beverages.png" alt="Bebidas Calientes" />
+        <div class="contenido">
+          <h2>Bebidas Calientes</h2>
+          <p>Amplia variedad de cafés calientes al vapor para hacerte sentir fresco y ligero</p>
+        </div>
+        <div class="btn-group">
+          <button class="btncomprar">Comprar</button>
+          <button class="btncomprar">Más detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="./img/cold-beverages.png" alt="Bebidas Frías" />
+        <div class="contenido">
+          <h2>Bebidas Frías</h2>
+          <p>Cremoso y espumoso café frío para hacerte sentir fresco.</p>
+        </div>
+        <div class="btn-group">
+          <button class="btncomprar">Comprar</button>
+          <button class="btncomprar">Más detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="./img/refreshment.png" alt="Refrescos" />
+        <div class="contenido">
+          <h2>Refrescos</h2>
+          <p>Bebida refrescante con frutas y hielo para hacerte sentir renovado.</p>
+        </div>
+        <div class="btn-group">
+          <button class="btncomprar">Comprar</button>
+          <button class="btncomprar">Más detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="./img/special-combo.png" alt="Combos Especiales" />
+        <div class="contenido">
+          <h2>Combos Especiales</h2>
+          <p>La mejor combinación de sabor, rapidez y precio.</p>
+        </div>
+        <div class="btn-group">
+          <button class="btncomprar">Comprar</button>
+          <button class="btncomprar">Más detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="./img/burger-frenchfries.png" alt="Comidas Rápidas" />
+        <div class="contenido">
+          <h2>Comidas Rápidas</h2>
+          <p>Hamburguesas, pizzas y snacks listos en minutos para disfrutar al instante.</p>
+        </div>
+        <div class="btn-group">
+          <button class="btncomprar">Comprar</button>
+          <button class="btncomprar">Más detalles</button>
+        </div>
+      </div>
+
+      <div class="ecard">
+        <img src="./img/desserts.png" alt="Postres" />
+        <div class="contenido">
+          <h2>Postres</h2>
+          <p>Postres dulces y deliciosos para endulzar cada momento.</p>
+        </div>
+        <div class="btn-group">
+          <button class="btncomprar">Comprar</button>
+          <button class="btncomprar">Más detalles</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./js/carrito.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/bdc4e23805.js" crossorigin="anonymous"></script>
-
-
-
 </html>
-     <script src="./js/carrito.js"></script>        
-</body>

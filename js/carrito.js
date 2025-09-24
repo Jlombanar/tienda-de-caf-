@@ -1,12 +1,17 @@
-let contador = 0;
-const contadorElemento = document.getElementById("contador");
+document.addEventListener("DOMContentLoaded", () => {
+  const botonesComprar = document.querySelectorAll(".btncomprar");
+  const carrito = document.getElementById("carrito");
+  const contador = document.getElementById("contador");
 
+  let cantidad = 0;
 
-const botonesComprar = document.querySelectorAll(".btncomprar");
+  botonesComprar.forEach(boton => {
+    boton.addEventListener("click", () => {
+      cantidad++;
+      contador.textContent = cantidad;
 
-botonesComprar.forEach(boton => {
-  boton.addEventListener("click", () => {
-    contador++;
-    contadorElemento.textContent = contador;
+      // Mostrar carrito en móvil
+      carrito.classList.add("mostrar");
+    });
   });
 });
