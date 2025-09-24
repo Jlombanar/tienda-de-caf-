@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Ribeye&family=Righteous&family=Poppins:wght@300;400;600&display=swap');
+
+/* RESETEO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #252525; ;;
+  padding-top: 70px; 
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: #3b141c;
+  top: 0;
+  left: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .nabvar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.nabvar .nav-logo .nav-text {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nabvar .nav-menu {
+  display: flex;
+  gap: 30px; 
+  justify-content: center;
+  flex: 1; 
+}
+
+
+.nabvar .nav-menu .nav-link {
+  padding: 10px 18px;
+  color: white;
+  font-size: large;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.nabvar .nav-menu .nav-link:hover {
+  color: #3b141c;
+  background-color: #e2750f;
+}
+
+.fa-cart-shopping {
+  font-size: 22px;
+  color: white;
+
+}
+.carrito #contador {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background:#e2750f;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 7px;
+  border-radius: 50%;
+}
+.carrito {
+  position: fixed;
+  top: 10px;     
+  right: 30px; 
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+
+/* TITULO PRINCIPAL */
+h1 {
+  text-align: center;
+  color: rgb(249, 246, 246);
+  margin: 10px 0 25px; 
+  font-size: 32px;
+  font-weight: bold;
+}
+.linea {
+  width: 60px; 
+  height: 4px;
+  background-color: orange;
+  margin: 1px auto 15px; 
+  border-radius: 2px; 
+}
+
+/* CONTENEDOR DE PRODUCTOS */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 40px;
+  justify-content: center;
+}
+
+.ecard {
+  background: linear-gradient(to right, #3b141c, #5c1f2a, #7a2d3b);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  flex: 0 1 calc(33.333% - 40px); 
+  max-width: 320px;               
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 20px 20px;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+
+
+.ecard img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.ecard .contenido {
+  flex-grow: 1;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ecard h2 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f5f0f0;
+}
+
+.ecard p {
+  font-size: 14px;
+  color: #faf8f8;
+  margin-bottom: 15px;
+}
+
+/* BOTONES */
+.ecard button {
+  background: #e2750f;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/* Contenedor de los botones */
+.btn-group {
+  display: flex;
+  gap: 10px;             
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Para que compartan mismo estilo base */
+.btn-group button {
+  flex: 1;              
+}
+
+.ecard button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* EFECTO HOVER EN TARJETA */
+.ecard:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .ecard {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .ecard {
+    flex: 0 1 100%;
+  }
+}
